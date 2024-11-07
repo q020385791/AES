@@ -78,3 +78,5 @@ public static class AES
 
     public static string AESDecrypt(string input) { ... }
 }
+```
+最後更新日期：2024/11/07
