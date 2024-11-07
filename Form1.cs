@@ -7,24 +7,31 @@ namespace AES
 			InitializeComponent();
 		}
 
-		private void label2_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void btnConvert_Click(object sender, EventArgs e)
 		{
-			if (!string.IsNullOrEmpty(txtToEnCrypt.Text))
-			{
-				txtEncryptR.Text =
-				PinTechLib.AES.AESEncrypt(txtToEnCrypt.Text);
-			}
+            try
+            {
+                if (!string.IsNullOrEmpty(txtToEnCrypt.Text))
+                {
+                    txtEncryptR.Text = WanLib.AES.AESEncrypt(txtToEnCrypt.Text);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"加密過程中發生錯誤：{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-			if (!string.IsNullOrEmpty(txtToDeCrypt.Text))
-			{
-				txtDecryptR.Text =
-				PinTechLib.AES.AESDecrypt(txtToDeCrypt.Text);
-			}
-		}
+            try
+            {
+                if (!string.IsNullOrEmpty(txtToDeCrypt.Text))
+                {
+                    txtDecryptR.Text = WanLib.AES.AESDecrypt(txtToDeCrypt.Text);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"解密過程中發生錯誤：{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 	}
 }
