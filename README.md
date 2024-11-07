@@ -35,6 +35,7 @@ This project provides a simple Windows Forms application capable of performing s
 3. 編譯並運行專案。
 4. 輸入需要加密或解密的字串，然後點擊「加密」或「解密」按鈕查看結果。
 
+<br>
 
 1. Clone or download this repository to your local machine.
 2. Open the `AES.sln` solution file.
@@ -45,6 +46,8 @@ This project provides a simple Windows Forms application capable of performing s
 
 - **WanLib**: 包含 AES 加密與解密邏輯的靜態類別庫。
 - **AES**: Windows Forms 應用程式，用於用戶交互。
+
+<br>
 
 
 - **WanLib**: Contains the static class library for AES encryption and decryption logic.
